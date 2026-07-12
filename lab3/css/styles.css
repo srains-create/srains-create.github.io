@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(to bottom, #0d47a1, #1976d2);
+    font-family: "Baloo 2", cursive;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #0d47a1;
+    font-family: "Baloo 2", cursive;
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #ffd54f;
+    text-shadow: 3px 3px 0 #ffd54f;
+}
+
+label,
+button {
+    font-family: "Baloo 2", cursive;
+}
+
+button {
+    font-size: 22px;
+    border-radius: 25px;
+}
+
+.container {
+    max-width: 700px;
+    background: white;
+    padding: 35px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+h1 {
+    color: #0d47a1;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #ffd54f;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #ffd54f;
+    padding-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #90caf9;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ffd54f;
+    box-shadow: 0 0 8px rgba(255,213,79,.7);
+}
+
+#city,
+#latitude,
+#longitude {
+    color: #1565c0;
+    font-weight: bold;
+}
+
+#usernameError,
+#passwordError,
+#suggestedPassword {
+    display: block;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    background-color: #ffd54f;
+    border: none;
+    color: #0d47a1;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #ffca28;
+    color: #0d47a1;
+}
