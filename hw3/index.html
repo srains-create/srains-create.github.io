@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Space Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h1>NASA Space Explorer</h1>
+      <p>Discover NASA's Astronomy Picture of the Day</p>
+    </header>
+
+    <form id="space-form">
+      <label for="date-input">Choose a date:</label>
+
+      <input
+        type="date"
+        id="date-input"
+        name="date"
+      >
+
+      <button type="submit">Explore Space</button>
+    </form>
+
+    <p id="message"></p>
+
+    <section id="result" class="hidden">
+      <h2 id="title"></h2>
+      <p id="date"></p>
+
+      <div id="media-container"></div>
+
+      <p id="copyright"></p>
+      <p id="explanation"></p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

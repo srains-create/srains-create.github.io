@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Rajdhani", Arial, sans-serif;
+  color: #e7ebf2;
+  background:
+    linear-gradient(rgba(1, 5, 20, 0.76), rgba(1, 8, 32, 0.94)),
+    url("https://images-assets.nasa.gov/image/PIA12348/PIA12348~orig.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9d3df;
+  text-shadow:
+    0 0 8px #165dff,
+    0 0 18px #165dff,
+    0 0 30px rgba(22, 93, 255, 0.75);
+}
+
+header p {
+  margin-top: 0;
+  color: #aeb9c8;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid rgba(192, 199, 210, 0.5);
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 33, 87, 0.88),
+    rgba(5, 17, 47, 0.88)
+  );
+  box-shadow:
+    0 0 20px rgba(22, 93, 255, 0.35),
+    inset 0 0 18px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+label {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  color: #d8dee8;
+  letter-spacing: 1px;
+}
+
+input[type="date"] {
+  padding: 11px 14px;
+  border: 1px solid #8e9bab;
+  border-radius: 8px;
+  color: #eef3f8;
+  background-color: rgba(7, 20, 53, 0.95);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #246bff;
+  box-shadow: 0 0 12px rgba(36, 107, 255, 0.85);
+}
+
+button {
+  padding: 12px 22px;
+  border: 1px solid #b9c3cf;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0b3fae, #1d6fff);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(29, 111, 255, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 12px #2f7cff,
+    0 0 24px rgba(47, 124, 255, 0.8);
+}
+
+#message {
+  min-height: 24px;
+  margin: 18px 0;
+  text-align: center;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+#result {
+  padding: 28px;
+  border: 1px solid #9ba8b8;
+  border-radius: 18px;
+  color: #eaf0f7;
+  background: linear-gradient(
+    145deg,
+    rgba(6, 20, 55, 0.96),
+    rgba(14, 40, 100, 0.92)
+  );
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(22, 93, 255, 0.38);
+}
+
+#result h2 {
+  margin-top: 0;
+  font-family: "Orbitron", sans-serif;
+  color: #d7dee8;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(39, 112, 255, 0.75);
+}
+
+#date {
+  color: #aab7c7;
+  font-weight: 600;
+}
+
+#media-container img,
+#media-container iframe {
+  display: block;
+  width: 100%;
+  max-height: 550px;
+  margin: 20px auto;
+  border: 1px solid #8090a4;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(22, 93, 255, 0.42);
+}
+
+#copyright {
+  font-style: italic;
+  color: #b8c2cf;
+}
+
+#explanation {
+  line-height: 1.8;
+  color: #edf2f7;
+  font-size: 1.05rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input[type="date"],
+  button {
+    width: 100%;
+  }
+}
