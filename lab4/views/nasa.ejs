@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+<h2><%= nasa.title %></h2>
+
+<% if (nasa.media_type === "image") { %>
+  <img
+    class="nasa-image"
+    src="<%= nasa.url %>"
+    alt="<%= nasa.title %>"
+  >
+<% } %>
+
+<p class="nasa-description"><%= nasa.explanation %></p>
+
+<%- include("partials/footer") %>
