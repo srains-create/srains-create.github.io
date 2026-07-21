@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<main class="page-content">
+    <h2>AI Lead Qualification</h2>
+
+    <img
+        src="/images/verified.jpg"
+        alt="Verified lead"
+        class="page-image"
+    >
+
+    <p>
+        AI lead qualification helps businesses decide which potential customers
+        are most likely to become buyers.
+    </p>
+
+    <p>
+        The system can review details such as customer interest, timeline,
+        budget, activity, and readiness to move forward.
+    </p>
+
+    <section class="lead-card">
+        <h3>Random Sample Lead</h3>
+        <p><strong>Name:</strong> <%= sampleLead.name %></p>
+        <p><strong>Email:</strong> <%= sampleLead.email %></p>
+        <p><strong>Company:</strong> <%= sampleLead.company %></p>
+        <p><strong>Job title:</strong> <%= sampleLead.jobTitle %></p>
+    </section>
+
+    <p class="source-note">
+        The sample lead information above is generated using the
+        <strong>@faker-js/faker</strong> Node package.
+    </p>
+</main>
+
+<%- include('partials/footer') %>
