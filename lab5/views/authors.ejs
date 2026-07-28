@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Authors</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <h1>Famous Authors</h1>
+
+    <main class="authors-container">
+        <% authors.forEach(author => { %>
+            <section class="author-card">
+                <img
+                    src="<%= author.portrait %>"
+                    alt="<%= author.firstName %> <%= author.lastName %>"
+                >
+
+                <h2><%= author.firstName %> <%= author.lastName %></h2>
+
+                <p>
+                    <strong>Profession:</strong>
+                    <%= author.profession %>
+                </p>
+
+                <p>
+                    <strong>Country:</strong>
+                    <%= author.country %>
+                </p>
+            </section>
+        <% }) %>
+    </main>
+
+</body>
+</html>

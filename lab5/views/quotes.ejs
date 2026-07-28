@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Quotes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <h1>Famous Quotes</h1>
+
+    <main class="quotes-container">
+        <% quotes.forEach(item => { %>
+            <article class="quote-card">
+                <p class="quote-text">
+                    “<%= item.quote %>”
+                </p>
+
+                <p class="quote-author">
+                    — <%= item.firstName %> <%= item.lastName %>
+                </p>
+
+                <div class="quote-details">
+                    <span><strong>Category:</strong> <%= item.category %></span>
+                    <span><strong>Likes:</strong> <%= item.likes %></span>
+                </div>
+            </article>
+        <% }) %>
+    </main>
+
+</body>
+</html>
