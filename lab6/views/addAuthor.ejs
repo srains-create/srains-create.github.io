@@ -1,0 +1,92 @@
+<%- include("partials/header") %>
+
+<main>
+    <h2>Add New Author</h2>
+
+    <form action="/admin/authors/add" method="POST">
+
+        <label for="firstName">First Name</label>
+        <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+        >
+
+        <br><br>
+
+        <label for="lastName">Last Name</label>
+        <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+        >
+
+        <br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            required
+        >
+
+        <br><br>
+
+        <label for="dod">Date of Death</label>
+        <input
+            type="date"
+            id="dod"
+            name="dod"
+        >
+
+        <br><br>
+
+        <label for="profession">Profession</label>
+        <input
+            type="text"
+            id="profession"
+            name="profession"
+            required
+        >
+
+        <br><br>
+
+        <label for="country">Country</label>
+        <input
+            type="text"
+            id="country"
+            name="country"
+            required
+        >
+
+        <br><br>
+
+        <label for="portrait">Portrait URL</label>
+        <input
+            type="url"
+            id="portrait"
+            name="portrait"
+            required
+        >
+
+        <br><br>
+
+        <label for="biography">Biography</label>
+        <textarea
+            id="biography"
+            name="biography"
+            rows="6"
+            required
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">Add Author</button>
+
+    </form>
+</main>
+
+<%- include("partials/footer") %>

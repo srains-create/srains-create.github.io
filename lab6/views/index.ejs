@@ -1,0 +1,106 @@
+<%- include("partials/header") %>
+
+<h2>Welcome to the Quote Finder</h2>
+
+<p>
+    Use the search form below to search famous quotes.
+</p>
+
+<form action="/searchByKeyword">
+
+    Keyword:
+    <input
+        type="text"
+        name="keyword">
+
+    <br><br>
+
+    <input
+        type="submit"
+        value="Search">
+
+</form>
+
+<hr>
+
+<h3>Search by Author</h3>
+
+<form action="/searchByAuthor">
+
+    <select name="authorId">
+
+        <% authors.forEach(author => { %>
+
+            <option value="<%= author.authorId %>">
+                <%= author.firstName %> <%= author.lastName %>
+            </option>
+
+        <% }) %>
+
+    </select>
+
+    <br><br>
+
+    <input
+        type="submit"
+        value="Search by Author">
+
+</form>
+
+<hr>
+
+<h3>Search by Category</h3>
+
+<form action="/searchByCategory">
+
+    <select name="category">
+
+        <% categories.forEach(category => { %>
+
+            <option value="<%= category.category %>">
+                <%= category.category %>
+            </option>
+
+        <% }) %>
+
+    </select>
+
+    <br><br>
+
+    <input
+        type="submit"
+        value="Search by Category">
+
+</form>
+
+<hr>
+
+<h3>Search by Likes</h3>
+
+<form action="/searchByLikes">
+
+    Minimum Likes:
+    <input
+        type="number"
+        name="minLikes"
+        min="0"
+        required>
+
+    <br><br>
+
+    Maximum Likes:
+    <input
+        type="number"
+        name="maxLikes"
+        min="0"
+        required>
+
+    <br><br>
+
+    <input
+        type="submit"
+        value="Search by Likes">
+
+</form>
+
+<%- include("partials/footer") %>

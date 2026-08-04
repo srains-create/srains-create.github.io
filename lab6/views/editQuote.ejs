@@ -1,0 +1,55 @@
+<%- include("partials/header") %>
+
+<h1>Edit Quote</h1>
+
+<form action="/admin/quotes/edit/<%= currentQuote.quoteId %>" method="POST">
+
+    <label>Quote</label><br>
+    <textarea name="quote" rows="5" cols="60" required><%= currentQuote.quote %></textarea>
+
+    <br><br>
+
+    <label>Author</label><br>
+    <select name="authorId" required>
+        <% authors.forEach(author => { %>
+            <option
+                value="<%= author.authorId %>"
+                <%= author.authorId === currentQuote.authorId ? "selected" : "" %>
+            >
+                <%= author.firstName %> <%= author.lastName %>
+            </option>
+        <% }) %>
+    </select>
+
+    <br><br>
+
+    <label>Category</label><br>
+    <select name="category" required>
+        <% categories.forEach(category => { %>
+            <option
+                value="<%= category.category %>"
+                <%= category.category === currentQuote.category ? "selected" : "" %>
+            >
+                <%= category.category %>
+            </option>
+        <% }) %>
+    </select>
+
+    <br><br>
+
+    <label>Likes</label><br>
+    <input
+        type="number"
+        name="likes"
+        min="0"
+        value="<%= currentQuote.likes %>"
+        required
+    >
+
+    <br><br>
+
+    <button type="submit">Update Quote</button>
+
+</form>
+
+<%- include("partials/footer") %>

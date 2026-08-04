@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: "Libre Baskerville", serif;
+    background-color: #f3f4f8;
+    color: #20243b;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Tangerine", cursive;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 35px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #174c3c;
+    font-family: "Libre Baskerville", serif;
+}
+
+.site-nav {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 16px;
+    text-align: center;
+    background-color: #174c3c;
+    border-radius: 12px;
+}
+
+.site-nav a {
+    margin: 0 18px;
+    color: #fffaf0;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    color: #f28c28;
+}
+
+form {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+input,
+select,
+button {
+    margin: 5px;
+    padding: 8px;
+    font-family: inherit;
+}
+
+input[type="submit"] {
+    padding: 9px 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #174c3c;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #f28c28;
+}
+
+.author-link {
+    color: #b45309;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}

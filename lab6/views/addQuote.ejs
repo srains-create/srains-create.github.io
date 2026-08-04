@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+
+<h1>Add New Quote</h1>
+
+<form action="/admin/quotes/add" method="POST">
+
+    <label>Quote</label><br>
+    <textarea name="quote" rows="5" cols="60" required></textarea>
+
+    <br><br>
+
+    <label>Author</label><br>
+    <select name="authorId" required>
+        <% authors.forEach(author => { %>
+            <option value="<%= author.authorId %>">
+                <%= author.firstName %> <%= author.lastName %>
+            </option>
+        <% }) %>
+    </select>
+
+    <br><br>
+
+    <label>Category</label><br>
+    <select name="category" required>
+        <% categories.forEach(category => { %>
+            <option value="<%= category.category %>">
+                <%= category.category %>
+            </option>
+        <% }) %>
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Add Quote
+    </button>
+
+</form>
+
+<%- include("partials/footer") %>

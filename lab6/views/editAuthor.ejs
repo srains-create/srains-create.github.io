@@ -1,0 +1,99 @@
+<%- include("partials/header") %>
+
+<main>
+    <h2>Edit Author</h2>
+
+    <form action="/admin/authors/edit/<%= author.authorId %>" method="POST">
+
+        <label for="firstName">First Name</label>
+        <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value="<%= author.firstName %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="lastName">Last Name</label>
+        <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value="<%= author.lastName %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            value="<%= author.dob ? new Date(author.dob).toISOString().split('T')[0] : '' %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="dod">Date of Death</label>
+        <input
+            type="date"
+            id="dod"
+            name="dod"
+            value="<%= author.dod ? new Date(author.dod).toISOString().split('T')[0] : '' %>"
+        >
+
+        <br><br>
+
+        <label for="profession">Profession</label>
+        <input
+            type="text"
+            id="profession"
+            name="profession"
+            value="<%= author.profession %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="country">Country</label>
+        <input
+            type="text"
+            id="country"
+            name="country"
+            value="<%= author.country %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="portrait">Portrait URL</label>
+        <input
+            type="url"
+            id="portrait"
+            name="portrait"
+            value="<%= author.portrait %>"
+            required
+        >
+
+        <br><br>
+
+        <label for="biography">Biography</label>
+        <textarea
+            id="biography"
+            name="biography"
+            rows="6"
+            required
+        ><%= author.biography %></textarea>
+
+        <br><br>
+
+        <button type="submit">Update Author</button>
+
+    </form>
+</main>
+
+<%- include("partials/footer") %>
