@@ -433,19 +433,21 @@ app.post("/admin/quotes/add", async (req, res) => {
         const {
             quote,
             authorId,
-            category
+            category,
+            likes
         } = req.body;
 
         const sql = `
             INSERT INTO q_quotes
-                (quote, authorId, category)
-            VALUES (?, ?, ?)
+                (quote, authorId, category, likes)
+            VALUES (?, ?, ?, ?)
         `;
 
         await pool.query(sql, [
             quote,
             authorId,
-            category
+            category,
+            likes
         ]);
 
         res.redirect("/quotes");

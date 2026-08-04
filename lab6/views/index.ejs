@@ -1,106 +1,41 @@
 <%- include("partials/header") %>
 
-<h2>Welcome to the Quote Finder</h2>
+<main class="admin-dashboard">
 
-<p>
-    Use the search form below to search famous quotes.
-</p>
+    <h2>Welcome to the Famous Quotes Admin Section</h2>
 
-<form action="/searchByKeyword">
+    <p>
+        Use the options below to manage authors and quotes.
+    </p>
 
-    Keyword:
-    <input
-        type="text"
-        name="keyword">
+    <section class="dashboard-actions">
 
-    <br><br>
+        <div class="dashboard-card">
+            <form action="/admin/authors/add">
+                <button type="submit">Add Authors</button>
+            </form>
+        </div>
 
-    <input
-        type="submit"
-        value="Search">
+        <div class="dashboard-card">
+            <form action="/admin/quotes/add">
+                <button type="submit">Add Quotes</button>
+            </form>
+        </div>
 
-</form>
+        <div class="dashboard-card">
+            <form action="/authors">
+                <button type="submit">List Authors</button>
+            </form>
+        </div>
 
-<hr>
+        <div class="dashboard-card">
+            <form action="/quotes">
+                <button type="submit">List Quotes</button>
+            </form>
+        </div>
 
-<h3>Search by Author</h3>
+    </section>
 
-<form action="/searchByAuthor">
-
-    <select name="authorId">
-
-        <% authors.forEach(author => { %>
-
-            <option value="<%= author.authorId %>">
-                <%= author.firstName %> <%= author.lastName %>
-            </option>
-
-        <% }) %>
-
-    </select>
-
-    <br><br>
-
-    <input
-        type="submit"
-        value="Search by Author">
-
-</form>
-
-<hr>
-
-<h3>Search by Category</h3>
-
-<form action="/searchByCategory">
-
-    <select name="category">
-
-        <% categories.forEach(category => { %>
-
-            <option value="<%= category.category %>">
-                <%= category.category %>
-            </option>
-
-        <% }) %>
-
-    </select>
-
-    <br><br>
-
-    <input
-        type="submit"
-        value="Search by Category">
-
-</form>
-
-<hr>
-
-<h3>Search by Likes</h3>
-
-<form action="/searchByLikes">
-
-    Minimum Likes:
-    <input
-        type="number"
-        name="minLikes"
-        min="0"
-        required>
-
-    <br><br>
-
-    Maximum Likes:
-    <input
-        type="number"
-        name="maxLikes"
-        min="0"
-        required>
-
-    <br><br>
-
-    <input
-        type="submit"
-        value="Search by Likes">
-
-</form>
+</main>
 
 <%- include("partials/footer") %>
